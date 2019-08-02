@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CameraWindow</class>
+ <widget class="QMainWindow" name="CameraWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_Save"/>
+    <addaction name="separator"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="action_ZoomIn"/>
+    <addaction name="action_ZoomOut"/>
+    <addaction name="action_ZoomFit"/>
+    <addaction name="separator"/>
+    <addaction name="action_ShowGrid"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>相机</string>
+    </property>
+    <addaction name="action_Open"/>
+    <addaction name="action_Close"/>
+    <addaction name="separator"/>
+    <addaction name="action_Single"/>
+    <addaction name="action_Contious"/>
+    <addaction name="action_Stop"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="action_Device"/>
+    <addaction name="action_Params"/>
+    <addaction name="separator"/>
+    <addaction name="action_tile"/>
+    <addaction name="action_cascade"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Save"/>
+   <addaction name="separator"/>
+   <addaction name="action_Open"/>
+   <addaction name="action_Close"/>
+   <addaction name="separator"/>
+   <addaction name="action_Single"/>
+   <addaction name="action_Contious"/>
+   <addaction name="action_Stop"/>
+   <addaction name="separator"/>
+   <addaction name="action_ZoomIn"/>
+   <addaction name="action_ZoomOut"/>
+   <addaction name="action_ZoomFit"/>
+   <addaction name="separator"/>
+   <addaction name="action_ShowGrid"/>
+  </widget>
+  <action name="action_Exit">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/exit.png</normaloff>:/image/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出(&amp;E)</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/save.png</normaloff>:/image/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+  </action>
+  <action name="action_Open">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/connect.png</normaloff>:/image/connect.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开(&amp;O)</string>
+   </property>
+  </action>
+  <action name="action_Close">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/disconnect.png</normaloff>:/image/disconnect.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭(&amp;C)</string>
+   </property>
+  </action>
+  <action name="action_Single">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/snap.png</normaloff>:/image/snap.png</iconset>
+   </property>
+   <property name="text">
+    <string>单拍</string>
+   </property>
+  </action>
+  <action name="action_Contious">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/grab.png</normaloff>:/image/grab.png</iconset>
+   </property>
+   <property name="text">
+    <string>连拍</string>
+   </property>
+  </action>
+  <action name="action_Stop">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/stop.png</normaloff>:/image/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>停止</string>
+   </property>
+  </action>
+  <action name="action_ZoomIn">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/zoom_in.png</normaloff>:/image/zoom_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="action_ZoomOut">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/zoom_out.png</normaloff>:/image/zoom_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="action_ZoomFit">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/zoom_fit.png</normaloff>:/image/zoom_fit.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩放到合适大小</string>
+   </property>
+  </action>
+  <action name="action_ShowGrid">
+   <property name="icon">
+    <iconset resource="../image.qrc">
+     <normaloff>:/image/grid.png</normaloff>:/image/grid.png</iconset>
+   </property>
+   <property name="text">
+    <string>显示网格</string>
+   </property>
+  </action>
+  <action name="action_Device">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>设备</string>
+   </property>
+  </action>
+  <action name="action_Params">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>特征参数</string>
+   </property>
+  </action>
+  <action name="action_tile">
+   <property name="text">
+    <string>平铺</string>
+   </property>
+  </action>
+  <action name="action_cascade">
+   <property name="text">
+    <string>折叠</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
